@@ -49,12 +49,10 @@ fi
 MNRH="$(brew --prefix)/bin/mnrh"
 echo "ok: mnrh $("$MNRH" --version)"
 
-step "Claude Code"
+step "Настройка mnrh"
+"$MNRH" init || echo "Пропущено. Настроить позже: mnrh init"
 if command -v claude >/dev/null 2>&1; then
-  "$MNRH" claude setup
-  echo "ok: /restart и MCP-сервер mnrh подключены — перезапустите Claude Code один раз вручную"
-else
-  echo "Claude Code не найден. Когда поставите его, выполните: mnrh claude setup"
+  echo "Если подключили Claude Code — перезапустите его один раз вручную."
 fi
 
 printf '\n\033[32mГотово.\033[0m Обновление: brew upgrade mnrh\n'
