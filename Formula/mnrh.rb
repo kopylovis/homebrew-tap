@@ -2,8 +2,8 @@ class Mnrh < Formula
   desc "Personal macOS utilities for development machines and Claude Code"
   homepage "https://github.com/kopylovis/mnrh-utils"
   url "https://github.com/kopylovis/mnrh-utils.git",
-      tag:      "v1.8.1",
-      revision: "4f95a03c767890e7ae279cb7299336217ad53b31"
+      tag:      "v1.9.0",
+      revision: "0e076856e982023064bb5c1b6dc7065faf5394cf"
   head "https://github.com/kopylovis/mnrh-utils.git", branch: "master"
 
   depends_on :macos
