@@ -3,7 +3,7 @@ class Mnrh < Formula
   homepage "https://github.com/kopylovis/mnrh-utils"
   url "https://github.com/kopylovis/mnrh-utils.git",
       tag:      "v1.16.0",
-      revision: "61a42074769b3f959d7768d40c9dfa1f5e47dc84"
+      revision: "de0f3aa685abb20d15c07a15dc317a8797cd18e6"
   head "https://github.com/kopylovis/mnrh-utils.git", branch: "master"
 
   depends_on :macos
