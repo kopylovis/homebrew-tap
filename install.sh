@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="kopylovis/mnrh-utils"
 FORMULA="kopylovis/tap/mnrh"
 
 step() { printf '\n\033[1m==> %s\033[0m\n' "$1"; }
@@ -24,21 +23,6 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 command -v brew >/dev/null 2>&1 || fail "Homebrew так и не появился в PATH."
 echo "ok: $(brew --version | head -1)"
-
-step "GitHub CLI"
-command -v gh >/dev/null 2>&1 || brew install gh
-echo "ok: $(gh --version | head -1)"
-
-step "Вход в GitHub"
-if gh auth status --hostname github.com >/dev/null 2>&1; then
-  echo "ok: уже выполнен"
-else
-  gh auth login --hostname github.com --git-protocol https --web
-fi
-gh auth setup-git --hostname github.com
-gh repo view "$REPO" >/dev/null 2>&1 \
-  || fail "У этого аккаунта GitHub нет доступа к $REPO. Войдите под нужным: gh auth login"
-echo "ok: доступ к $REPO есть"
 
 step "mnrh"
 if brew list --formula mnrh >/dev/null 2>&1; then
