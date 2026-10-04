@@ -34,7 +34,7 @@ MNRH="$(brew --prefix)/bin/mnrh"
 echo "ok: mnrh $("$MNRH" --version)"
 
 step "Настройка mnrh"
-"$MNRH" init || echo "Пропущено. Настроить позже: mnrh init"
+MNRH_NO_MENU=1 "$MNRH" init || echo "Пропущено. Настроить позже: mnrh init setup"
 if command -v claude >/dev/null 2>&1; then
   echo "Если подключили Claude Code — перезапустите его один раз вручную."
 fi
