@@ -16,3 +16,14 @@ mnrh init
 ```
 
 Обновление: `brew upgrade mnrh`.
+
+## promptsill
+
+Строка состояния для Claude Code, открытый проект: https://github.com/kopylovis/promptsill
+
+```bash
+brew install kopylovis/tap/promptsill
+promptsill install
+```
+
+Обновление: `brew upgrade promptsill`.
