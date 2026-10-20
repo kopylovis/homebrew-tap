@@ -31,6 +31,37 @@ if [ "$(printf '%s\n%s\n' "$MIN_BREW" "$brew_version" | sort -V | head -1)" != "
 fi
 echo "ok: $(brew --version | head -1)"
 
+step "Xcode и Command Line Tools"
+# Формулы тапа собираются из исходников. Со старым Xcode или CLT Homebrew прерывает установку,
+# поэтому те же проверки идут здесь, до brew install.
+CHECKS=(check_for_installed_developer_tools check_xcode_license_approved check_xcode_minimum_version
+  check_clt_minimum_version check_if_xcode_needs_clt_installed check_if_supported_sdk_available)
+CLT=/Library/Developer/CommandLineTools
+if ! doctor="$(brew doctor "${CHECKS[@]}" 2>&1)"; then
+  printf '%s\n' "$doctor"
+  xcode="$(printf '%s\n' "$doctor" | sed -n 's/.* at \(\/.*\.app\) is too outdated\..*/\1/p' | head -1)"
+  if [ -n "$xcode" ]; then
+    echo
+    echo "$xcode слишком старый для этой macOS, и Homebrew с ним ничего не соберет."
+    echo "Для mnrh хватит Command Line Tools. Если Xcode нужен для работы, ответьте n и обновите его в App Store."
+    read -rp "Удалить $xcode? [y/N] " answer </dev/tty
+    [ "$answer" = "y" ] || [ "$answer" = "Y" ] \
+      || fail "Обновите Xcode в App Store или удалите его и запустите скрипт снова."
+    sudo rm -rf "$xcode"
+    sudo xcode-select --reset
+    if [ ! -x "$CLT/usr/bin/git" ]; then
+      xcode-select --install || true
+      fail "Дождитесь, пока установятся Command Line Tools, и запустите скрипт снова."
+    fi
+  elif printf '%s\n' "$doctor" | grep -q "Command Line Tools"; then
+    fail "Переустановите Command Line Tools и запустите скрипт снова:
+  sudo rm -rf $CLT
+  xcode-select --install"
+  fi
+  brew doctor "${CHECKS[@]}" >/dev/null 2>&1 || fail "Homebrew все еще не готов собирать формулы, причина выше."
+fi
+echo "ok"
+
 step "Доступ к $REPO"
 # Пока репозиторий открытый, токен не нужен. Если его снова закроют, спросим токен.
 if curl -fsS -o /dev/null "https://api.github.com/repos/$REPO" 2>/dev/null; then
