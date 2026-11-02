@@ -2,11 +2,12 @@ class Mnrh < Formula
   desc "Personal macOS utilities for development machines and Claude Code"
   homepage "https://github.com/kopylovis/mnrh-utils"
   url "https://github.com/kopylovis/mnrh-utils.git",
-      tag:      "v1.30.2",
-      revision: "5d1fa1a67cfa4d3551db65faaaabc6bf7f47355d"
+      tag:      "v1.31.0",
+      revision: "726ffb53ae0c8dfc5de6385fb3860e23ec8072fa"
   head "https://github.com/kopylovis/mnrh-utils.git", branch: "master"
 
   depends_on "kopylovis/tap/promptsill"
+  depends_on "mihomo" # mnrh claude -x: a session through your own proxy server
   depends_on :macos
 
   def install
