@@ -7,8 +7,8 @@ class Mnrh < Formula
   head "https://github.com/kopylovis/mnrh-utils.git", branch: "master"
 
   depends_on "kopylovis/tap/promptsill"
-  depends_on "mihomo" # mnrh claude -x: a session through your own proxy server
   depends_on :macos
+  depends_on "mihomo" # mnrh claude -x: a session through your own proxy server
 
   def install
     libexec.install Dir["*"]
