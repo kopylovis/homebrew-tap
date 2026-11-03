@@ -2,8 +2,8 @@ class Promptsill < Formula
   desc "Status line for Claude Code with limit pace, dev servers, ports and memory"
   homepage "https://github.com/kopylovis/promptsill"
   url "https://github.com/kopylovis/promptsill.git",
-      tag:      "v0.5.1",
-      revision: "7be8fb39bbb92a01e099eeb479edb10698cc608b"
+      tag:      "v0.6.0",
+      revision: "ceda0124d478005419d9a2aa51d3bb1b37aff004"
   license "MIT"
   head "https://github.com/kopylovis/promptsill.git", branch: "main"
 
