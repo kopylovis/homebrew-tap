@@ -17,6 +17,19 @@ mnrh init
 
 Обновление: `brew upgrade mnrh`.
 
+## claudemeister
+
+Обвязка для Claude Code: запуск в проекте с выбором сессии, /restart, прокси через свой сервер
+для отдельных сессий, хуки и MCP-сервер. Раньше была командой `mnrh claude`, mnrh ставит ее сам.
+Отдельно, без mnrh: https://github.com/kopylovis/claudemeister
+
+```bash
+brew install kopylovis/tap/claudemeister
+claudemeister setup
+```
+
+Обновление: `brew upgrade claudemeister`.
+
 ## promptsill
 
 Строка состояния для Claude Code, открытый проект: https://github.com/kopylovis/promptsill
