@@ -2,8 +2,8 @@ class Mnrh < Formula
   desc "Personal macOS utilities for development machines and Claude Code"
   homepage "https://github.com/kopylovis/mnrh-utils"
   url "https://github.com/kopylovis/mnrh-utils.git",
-      tag:      "v1.33.0",
-      revision: "80a71768c6a2b76fcbc2b2fcff1974fafbcc3208"
+      tag:      "v1.33.1",
+      revision: "e36647b5ea69bc54b7ca306bc5f1aa8fd8e14d1f"
   head "https://github.com/kopylovis/mnrh-utils.git", branch: "master"
 
   depends_on "kopylovis/tap/promptsill"
