@@ -2,8 +2,8 @@ class Claudemeister < Formula
   desc "Claude Code kit for macOS: sessions, restart, per-session proxy, MCP tools"
   homepage "https://github.com/kopylovis/claudemeister"
   url "https://github.com/kopylovis/claudemeister.git",
-      tag:      "v1.9.0",
-      revision: "2ad2d0d33110f253cb19dd0653617a7de65fef4e"
+      tag:      "v1.10.0",
+      revision: "5d3a1a855649008913677708e3cd23e062b9f5cc"
   head "https://github.com/kopylovis/claudemeister.git", branch: "main"
 
   depends_on :macos
