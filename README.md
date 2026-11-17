@@ -20,7 +20,7 @@ mnrh init
 ## agentmeister
 
 Запуск Claude Code и Codex в выбранном проекте, прокси для отдельных сессий, хуки и MCP-сервер.
-Команды `claudemeister` и `cm` по-прежнему работают. [agentmeister на GitHub](https://github.com/kopylovis/agentmeister)
+`am` открывает то же меню, что и `agentmeister`. [agentmeister на GitHub](https://github.com/kopylovis/agentmeister)
 
 ```bash
 brew install kopylovis/tap/agentmeister

@@ -2,8 +2,8 @@ class Agentmeister < Formula
   desc "Project picker, session tools and per-session proxy for Claude Code and Codex"
   homepage "https://github.com/kopylovis/agentmeister"
   url "https://github.com/kopylovis/agentmeister.git",
-      tag:      "v1.12.1",
-      revision: "222ee3b9e3dd5b03b2011b5c3181b95cb6bf4185"
+      tag:      "v1.13.0",
+      revision: "e6902c480bdd5f54fff47c1ad981d4295938a4eb"
   head "https://github.com/kopylovis/agentmeister.git", branch: "main"
 
   depends_on :macos
@@ -13,7 +13,7 @@ class Agentmeister < Formula
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/agentmeister"
     bin.install_symlink libexec/"bin/agentmeister" => "claudemeister"
-    bin.install_symlink libexec/"bin/agentmeister" => "cm"
+    bin.install_symlink libexec/"bin/agentmeister" => "am"
   end
 
   def caveats
@@ -26,6 +26,6 @@ class Agentmeister < Formula
   test do
     assert_equal version.to_s, shell_output("#{bin}/agentmeister --version").strip
     assert_equal version.to_s, shell_output("#{bin}/claudemeister --version").strip
-    assert_equal version.to_s, shell_output("#{bin}/cm --version").strip
+    assert_equal version.to_s, shell_output("#{bin}/am --version").strip
   end
 end
