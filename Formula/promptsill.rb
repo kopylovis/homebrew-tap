@@ -23,7 +23,7 @@ class Promptsill < Formula
 
   test do
     assert_equal version.to_s, shell_output("#{bin}/promptsill --version").strip
-    output = pipe_output("#{bin}/promptsill", '{"context_window":{"used_percentage":42}}', 0)
+    output = pipe_output(bin/"promptsill", '{"context_window":{"used_percentage":42}}', 0)
     assert_match "42%", output
     ENV["CODEX_HOME"] = (testpath/"codex").to_s
     assert_match "Codex", shell_output("#{bin}/promptsill codex")
