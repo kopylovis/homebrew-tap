@@ -6,7 +6,7 @@ class Mnrh < Formula
       revision: "00f483bc2d3970d53c984622fb0e8205ff8a4c61"
   head "https://github.com/kopylovis/mnrh-utils.git", branch: "master"
 
-  depends_on "kopylovis/tap/claudemeister" # mnrh claude, todo, shot, deps
+  depends_on "kopylovis/tap/agentmeister" # mnrh claude, todo, shot, deps
   depends_on "kopylovis/tap/promptsill"
   depends_on :macos
 
@@ -17,8 +17,8 @@ class Mnrh < Formula
 
   def caveats
     <<~EOS
-      To add /restart, hooks and the claudemeister MCP server to Claude Code, run:
-        claudemeister setup
+      To set up agentmeister for Claude Code, run:
+        agentmeister setup
     EOS
   end
 
