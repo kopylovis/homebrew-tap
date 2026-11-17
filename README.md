@@ -31,7 +31,8 @@ agentmeister
 
 ## promptsill
 
-Строка состояния для Claude Code, открытый проект: https://github.com/kopylovis/promptsill
+Строка состояния для Claude Code. Команда `promptsill codex` выводит состояние сессии Codex и данные о проекте.
+[promptsill на GitHub](https://github.com/kopylovis/promptsill)
 
 ```bash
 brew install kopylovis/tap/promptsill
