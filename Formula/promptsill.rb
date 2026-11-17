@@ -2,8 +2,8 @@ class Promptsill < Formula
   desc "Status line for Claude Code and terminal snapshots for Codex"
   homepage "https://github.com/kopylovis/promptsill"
   url "https://github.com/kopylovis/promptsill.git",
-      tag:      "v0.7.0",
-      revision: "002ba73014bd93c4a83e8679471b1a0c813b1c07"
+      tag:      "v0.8.0",
+      revision: "79bf6e5d4cdd4dd5803777b87b8166bdda2450e2"
   license "MIT"
   head "https://github.com/kopylovis/promptsill.git", branch: "main"
 
@@ -17,6 +17,7 @@ class Promptsill < Formula
     <<~EOS
       To turn the status line on in Claude Code, run:
         promptsill install
+      To enable the live Codex footer, run `promptsill codex install`.
       For a Codex snapshot, run `promptsill codex`.
     EOS
   end
