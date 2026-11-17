@@ -17,18 +17,17 @@ mnrh init
 
 Обновление: `brew upgrade mnrh`.
 
-## claudemeister
+## agentmeister
 
-Обвязка для Claude Code: запуск в проекте с выбором сессии, /restart, прокси через свой сервер
-для отдельных сессий, хуки и MCP-сервер. Раньше была командой `mnrh claude`, mnrh ставит ее сам.
-Отдельно, без mnrh: https://github.com/kopylovis/claudemeister
+Запуск Claude Code и Codex в выбранном проекте, прокси для отдельных сессий, хуки и MCP-сервер.
+Команды `claudemeister` и `cm` по-прежнему работают. [agentmeister на GitHub](https://github.com/kopylovis/agentmeister)
 
 ```bash
-brew install kopylovis/tap/claudemeister
-claudemeister setup
+brew install kopylovis/tap/agentmeister
+agentmeister
 ```
 
-Обновление: `brew upgrade claudemeister`.
+Для обновления используй `brew upgrade agentmeister`.
 
 ## promptsill
 
