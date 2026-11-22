@@ -7,12 +7,11 @@ class Agentmeister < Formula
   head "https://github.com/kopylovis/agentmeister.git", branch: "main"
 
   depends_on :macos
-  depends_on "mihomo" # claudemeister -x: a session through your own proxy server
+  depends_on "mihomo" # agentmeister -x: a session through your own proxy server
 
   def install
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/agentmeister"
-    bin.install_symlink libexec/"bin/agentmeister" => "claudemeister"
     bin.install_symlink libexec/"bin/agentmeister" => "am"
   end
 
@@ -25,7 +24,6 @@ class Agentmeister < Formula
 
   test do
     assert_equal version.to_s, shell_output("#{bin}/agentmeister --version").strip
-    assert_equal version.to_s, shell_output("#{bin}/claudemeister --version").strip
     assert_equal version.to_s, shell_output("#{bin}/am --version").strip
   end
 end
