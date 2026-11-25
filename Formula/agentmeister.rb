@@ -2,8 +2,8 @@ class Agentmeister < Formula
   desc "Project picker, session tools and per-session proxy for Claude Code and Codex"
   homepage "https://github.com/kopylovis/agentmeister"
   url "https://github.com/kopylovis/agentmeister.git",
-      tag:      "v1.19.0",
-      revision: "8f1b90a392a9a242abaeebfbc43afd0ff603349b"
+      tag:      "v1.20.0",
+      revision: "0d3f91c550970f70d0a5994bb88ca1819f60fbf8"
   head "https://github.com/kopylovis/agentmeister.git", branch: "main"
 
   depends_on :macos
