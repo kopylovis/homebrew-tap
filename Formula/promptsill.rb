@@ -2,8 +2,8 @@ class Promptsill < Formula
   desc "Status line for Claude Code and a live terminal panel for Codex"
   homepage "https://github.com/kopylovis/promptsill"
   url "https://github.com/kopylovis/promptsill.git",
-      tag:      "v0.10.0",
-      revision: "865ca244ac464e2534d083b4afbfb2a924c87d1d"
+      tag:      "v0.11.0",
+      revision: "1f4db0fd874bf13dcde8617588f37c58daeb8ded"
   license "MIT"
   head "https://github.com/kopylovis/promptsill.git", branch: "main"
 
