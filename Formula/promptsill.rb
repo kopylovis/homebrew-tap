@@ -3,7 +3,7 @@ class Promptsill < Formula
   homepage "https://github.com/kopylovis/promptsill"
   url "https://github.com/kopylovis/promptsill.git",
       tag:      "v0.11.0",
-      revision: "1f4db0fd874bf13dcde8617588f37c58daeb8ded"
+      revision: "37d294423784a730e81ab41772cefd52644231cb"
   license "MIT"
   head "https://github.com/kopylovis/promptsill.git", branch: "main"
 

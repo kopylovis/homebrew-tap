@@ -3,7 +3,7 @@ class Agentmeister < Formula
   homepage "https://github.com/kopylovis/agentmeister"
   url "https://github.com/kopylovis/agentmeister.git",
       tag:      "v1.23.0",
-      revision: "594e11683b5e211e30681632343b4f855f0db439"
+      revision: "8c4ffcb9eb63f949e03cb5b60c83b1a738683b69"
   head "https://github.com/kopylovis/agentmeister.git", branch: "main"
 
   depends_on :macos
